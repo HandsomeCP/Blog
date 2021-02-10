@@ -121,7 +121,8 @@
         "active": "gitalk",
         "storage": true,
         "lazyload": false,
-        "nav": null
+        "nav": null,
+        "activeClass": "gitalk"
       },
       "algolia":
       {
@@ -173,8 +174,8 @@
   <meta property="article:author" content="崔庆才">
   <meta property="article:tag" content="静觅">
   <meta property="article:tag" content="崔庆才">
-  <meta property="article:tag" content="json">
   <meta property="article:tag" content="PHP">
+  <meta property="article:tag" content="json">
   <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://cuiqingcai.com/27.html">
   <script id="page-configurations">
@@ -505,8 +506,8 @@
                 <div class="post-tags">
                   <a href="/tags/%E9%9D%99%E8%A7%85/" rel="tag"><i class="fa fa-tag"></i> 静觅</a>
                   <a href="/tags/%E5%B4%94%E5%BA%86%E6%89%8D/" rel="tag"><i class="fa fa-tag"></i> 崔庆才</a>
-                  <a href="/tags/json/" rel="tag"><i class="fa fa-tag"></i> json</a>
                   <a href="/tags/PHP/" rel="tag"><i class="fa fa-tag"></i> PHP</a>
+                  <a href="/tags/json/" rel="tag"><i class="fa fa-tag"></i> json</a>
                 </div>
                 <div class="post-nav">
                   <div class="post-nav-item">
@@ -521,6 +522,7 @@
               </footer>
             </article>
           </div>
+          <div class="comments" id="gitalk-container"></div>
           <script>
             window.addEventListener('tabs:register', () =>
             {
@@ -1170,6 +1172,28 @@
   </script>
   <script src="/js/local-search.js"></script>
   <script src="/.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+  <script>
+    NexT.utils.loadComments(document.querySelector('#gitalk-container'), () =>
+    {
+      NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () =>
+      {
+        var gitalk = new Gitalk(
+        {
+          clientID: '4c86ce1d7c4fbb3b277c',
+          clientSecret: '4927beb0f90e2c07e66c99d9d2529cf3eb8ac8e4',
+          repo: 'Blog',
+          owner: 'germey',
+          admin: ['germey'],
+          id: 'f622e1f3d0cbeb0f17c27aa1b6865c7d',
+          language: 'zh-CN',
+          distractionFreeMode: true
+        });
+        gitalk.render('gitalk-container');
+      }, window.Gitalk);
+    });
+
+  </script>
 </body>
 
 </html>
