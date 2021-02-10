@@ -121,8 +121,7 @@
         "active": "gitalk",
         "storage": true,
         "lazyload": false,
-        "nav": null,
-        "activeClass": "gitalk"
+        "nav": null
       },
       "algolia":
       {
@@ -549,7 +548,6 @@
               </footer>
             </article>
           </div>
-          <div class="comments" id="gitalk-container"></div>
           <script>
             window.addEventListener('tabs:register', () =>
             {
@@ -1216,28 +1214,6 @@
   </script>
   <script src="/js/local-search.js"></script>
   <script src="/.js"></script>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
-  <script>
-    NexT.utils.loadComments(document.querySelector('#gitalk-container'), () =>
-    {
-      NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () =>
-      {
-        var gitalk = new Gitalk(
-        {
-          clientID: '4c86ce1d7c4fbb3b277c',
-          clientSecret: '4927beb0f90e2c07e66c99d9d2529cf3eb8ac8e4',
-          repo: 'Blog',
-          owner: 'germey',
-          admin: ['germey'],
-          id: 'bd8d61ab6242e74c473c4a6b7db6e345',
-          language: 'zh-CN',
-          distractionFreeMode: true
-        });
-        gitalk.render('gitalk-container');
-      }, window.Gitalk);
-    });
-
-  </script>
 </body>
 
 </html>

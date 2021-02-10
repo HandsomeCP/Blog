@@ -121,8 +121,7 @@
         "active": "gitalk",
         "storage": true,
         "lazyload": false,
-        "nav": null,
-        "activeClass": "gitalk"
+        "nav": null
       },
       "algolia":
       {
@@ -467,10 +466,10 @@
                   <div class="popular-posts-title"><a href="/2599.html" rel="bookmark">Python爬虫利器五之Selenium的用法</a></div>
                 </li>
                 <li class="popular-posts-item">
-                  <div class="popular-posts-title"><a href="/8627.html" rel="bookmark">严选高质量文章 - 爬虫工程师必看，深入解读字体反爬虫</a></div>
+                  <div class="popular-posts-title"><a href="/23859.html" rel="bookmark">二次封装requests，构造通用的请求函数</a></div>
                 </li>
                 <li class="popular-posts-item">
-                  <div class="popular-posts-title"><a href="/23859.html" rel="bookmark">二次封装requests，构造通用的请求函数</a></div>
+                  <div class="popular-posts-title"><a href="/8627.html" rel="bookmark">严选高质量文章 - 爬虫工程师必看，深入解读字体反爬虫</a></div>
                 </li>
               </ul>
               <div class="reward-container">
@@ -506,7 +505,6 @@
               </footer>
             </article>
           </div>
-          <div class="comments" id="gitalk-container"></div>
           <script>
             window.addEventListener('tabs:register', () =>
             {
@@ -1163,28 +1161,6 @@
   </script>
   <script src="/js/local-search.js"></script>
   <script src="/.js"></script>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
-  <script>
-    NexT.utils.loadComments(document.querySelector('#gitalk-container'), () =>
-    {
-      NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () =>
-      {
-        var gitalk = new Gitalk(
-        {
-          clientID: '4c86ce1d7c4fbb3b277c',
-          clientSecret: '4927beb0f90e2c07e66c99d9d2529cf3eb8ac8e4',
-          repo: 'Blog',
-          owner: 'germey',
-          admin: ['germey'],
-          id: '1af82a2c2d54c3536825edfe20a18b5d',
-          language: 'zh-CN',
-          distractionFreeMode: true
-        });
-        gitalk.render('gitalk-container');
-      }, window.Gitalk);
-    });
-
-  </script>
 </body>
 
 </html>
